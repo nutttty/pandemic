@@ -12,8 +12,6 @@ class InfectionDeck:
 
 
     def initialCities(s):
-
-
         if len(s.deck) > 1: print "BAD: calling initial cities when deck no in initial state. continuing anyway"
         cities = [[],[],[]]
 
