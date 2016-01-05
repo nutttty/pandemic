@@ -54,4 +54,4 @@ allCities['jakarta'] = 'r'
 allCities['shanghai'] = 'r'
 allCities['sydney'] = 'r'
 
-events = ['airlift', 'governmentgrant', 'airlift','onequietnight','forecast','resilientpopulation']
+events = ['airlift', 'governmentgrant', 'onequietnight','forecast','resilientpopulation']
