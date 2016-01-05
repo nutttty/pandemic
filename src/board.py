@@ -18,7 +18,7 @@ board['milan'] = ['essen','paris','istanbul']
 board['saopaulo'] = ['madrid','bogota','buenosaires','lagos']
 board['miami'] = ['washington','atlanta','mexicocity','bogota']
 board['johannesburg'] = ['kinshasa','khartoum']
-board['botoga'] = ['miami','mexicocity','lima','buenosaires','saopaulo']
+board['bogota'] = ['miami','mexicocity','lima','buenosaires','saopaulo']
 board['losangeles'] = ['sanfrancisco','sydney','mexicocity','chicago']
 board['mexicocity'] = ['chicago','losangeles','lima','bogota','miami']
 board['lima'] = ['mexicocity','santiago','bogota']
@@ -47,13 +47,24 @@ board['hochiminhcity'] = ['bangkok','jakarta','manila','hongkong']
 board['tokyo'] = ['seoul','shanghai','osaka','sanfrancisco']
 board['manila'] = ['taipei','hongkong','hochiminhcity','sydney','sanfrancisco']
 board['hongkong'] = ['kolkata','bangkok','hochiminhcity','manila','taipei','shanghai']
-board['bankok'] = ['kolkata','chennai','jakarta','hochiminhcity','hongkong']
+board['bangkok'] = ['kolkata','chennai','jakarta','hochiminhcity','hongkong']
 board['seoul'] = ['beijing','shanghai','tokyo']
 board['osaka'] = ['tokyo','taipei']
 board['jakarta'] = ['chennai','sydney','hochiminhcity','bangkok']
-board['shangai'] = ['beijing','hongkong','taipei','tokyo','seoul']
+board['shanghai'] = ['beijing','hongkong','taipei','tokyo','seoul']
 board['sydney'] = ['manila','jakarta','losangeles']
 
 def boardchecker():
-	pass
-
+	#city, list pair
+	for keycity in board:
+		citylist=board[keycity]
+		passedtest=True
+		#print "===Checking ",keycity, citylist,"==="
+		#for each city connected to key, see if key is contained in each city's list.
+		for city in citylist:
+			passedtest=passedtest and (keycity in board[city])
+				
+		if passedtest==True:
+			print keycity, " PASSES"
+		else:
+			print keycity, " FAILS"
